@@ -1,0 +1,30 @@
+{
+  "name": "compiless",
+  "version": "0.0.1",
+  "description": "Compile LESS files throughout a directory tree",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExPHAT/compiless.git"
+  },
+  "keywords": [
+    "less",
+    "compile",
+    "css"
+  ],
+  "author": "Aaron Taylor <me@exphat.com> (http://exphat.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExPHAT/compiless/issues"
+  },
+  "homepage": "https://github.com/ExPHAT/compiless#readme",
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  },
+  "dependencies": {
+    "less": "^2.5.3"
+  }
+}
