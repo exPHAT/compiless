@@ -35,5 +35,5 @@ Running tests
 Ensure you have mocha installed.
 
 ```shell
-$ mocha
+$ npm test
 ```
