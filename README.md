@@ -13,7 +13,7 @@ $ npm install
 
 Then in some file that is called upon app start (should only be called once):
 ```js
-require("compiless")({
+require("compiless")(__dirname, {
   "./src/less": "./public/css"
 });
 ```
