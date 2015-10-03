@@ -1,6 +1,6 @@
 {
   "name": "compiless",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Compile LESS files throughout a directory tree",
   "main": "index.js",
   "scripts": {
