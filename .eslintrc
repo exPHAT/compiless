@@ -1,0 +1,30 @@
+{
+  "env": {
+    "node": true
+  },
+  "ecmaFeatures": {
+    "modules": true
+  },
+  "globals": {
+    "describe": false,
+    "before": false,
+    "beforeEach": false,
+    "it": false,
+    "after": true
+  },
+  "rules": {
+    "camelcase": 1,
+    "no-unused-vars": 1,
+    "new-cap": 0,
+    "key-spacing": 0,
+    "no-multi-spaces": 0,
+    "eol-last": 1,
+    "strict": 0,
+    "no-underscore-dangle": 0,
+    "valid-jsdoc": [1, {
+      "prefer": {
+          "return": "returns"
+      }
+  }]
+  }
+}
