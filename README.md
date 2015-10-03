@@ -8,9 +8,9 @@ Compiles LESS files throughout a directory tree and exports them to a specific d
 
 Usage
 -----
-Install required dependencies
+Install the package
 ```shell
-$ npm install
+$ npm install compiless
 ```
 
 Then in some file that is called upon app start (should only be called once):
@@ -25,15 +25,24 @@ This will take any LESS files from the `src/less` directory, compile them, and e
 
 Important notes
 ---------------
-* Found directories will be recursivly searched.
+* Found directories will be recursively searched.
 * If a directory does not exist, it will be created.
 * Previous files at a path **WILL** be overwritten
 
 
 Running tests
 -------------
-Ensure you have mocha installed.
+Clone this repo
+```shell
+$ git clone https://github.com/ExPHAT/compiless.git
+```
 
+Install all of the dependencies
+```shell
+$ npm install
+```
+
+Run the tests
 ```shell
 $ npm test
 ```
