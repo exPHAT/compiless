@@ -20,7 +20,7 @@ require("compiless")(__dirname, {
 });
 ```
 
-This will take any LESS files from the `assets/less` directory, compile them, and export them to the `public/css` directory.
+This will take any LESS files from the `src/less` directory, compile them, and export them to the `public/css` directory. So that they can be statically served.
 
 
 Important notes
