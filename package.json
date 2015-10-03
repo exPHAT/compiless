@@ -22,12 +22,12 @@
   },
   "homepage": "https://github.com/ExPHAT/compiless#readme",
   "devDependencies": {
-    "eslint": "1.6.0",
-    "expect.js": "0.3.1",
-    "mocha": "2.3.3",
-    "remove": "0.1.5"
+    "eslint": "^1.6.0",
+    "expect.js": "^0.3.1",
+    "mocha": "^2.3.3",
+    "remove": "^0.1.5"
   },
   "dependencies": {
-    "less": "2.5.3"
+    "less": "^2.5.3"
   }
 }
