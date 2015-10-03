@@ -1,6 +1,7 @@
 compiLESS
 =========
 [![Build Status](https://magnum.travis-ci.com/ExPHAT/compiless.svg?token=pkSoYQq6oTsthGL4pZ6z)](https://magnum.travis-ci.com/ExPHAT/compiless)
+[![NPM version](https://badge.fury.io/js/compiless.svg)](https://npmjs.org/package/compiless)
 
 Compiles LESS files throughout a directory tree and exports them to a specific directory.
 
