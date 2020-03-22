@@ -9,22 +9,11 @@ import {
 import path from "path";
 import {renderLessAsync} from "./less";
 
-
-/*
- * Determine if a path is a directory
- * @param {String} pth  Tthe absolute path to the possible directory
- * @returns {Boolean} If the specified path is a directory
- */
 async function isDir(pth: string): Promise<boolean> {
   return (await pathExists(pth)) && (await lstat(pth)).isDirectory();
 }
 
-/*
- * The main recursive function that explores directories
- * @param {String} pth    the directory to explore
- * @param {Array} list    the current list of found files
- */
-async function explore(pth: string, list: String[], dirsToCreate: any): Promise<any> {
+async function explore(pth: string, list: string[], dirsToCreate: any): Promise<string[]> {
   dirsToCreate.push(pth); // Store directories that need to be created
 
   var contents = await readdir(pth);
@@ -41,14 +30,6 @@ async function explore(pth: string, list: String[], dirsToCreate: any): Promise<
   return list;
 }
 
-/*
- * The main module itself
- * @param {String} startPath     The path that all data is relative to (generally __dirname)
- * @param {Object} toMove        The directories to be explored and exported
- * @param {Object} opts          An optional argument of options to be used
- * @param {Integer} opts.depth   How deep the recursive search should go
- * @param {Object} opts.less     Any options to pass to the LESS renderer
- */
 export = async function compiless(
   startPath: string,
   toMove: {
@@ -111,9 +92,10 @@ export = async function compiless(
 
     for (let file of files) {
       // Extact the extension of the file
-      let ext = file.match(/\.(.*)$/);
-      if (ext && ext[1]) {
-        ext = ext[1];
+      const match  = file.match(/\.(.*)$/);
+      let ext: string;
+      if (match && match[1]) {
+        ext = match[1];
       } else {
         // TODO: Log warning here? "Unable to process file extension"
         continue;

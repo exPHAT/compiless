@@ -13,11 +13,11 @@ describe("compiless", function() {
     }
   });
 
-  it("should return a function", function() {
+  it("Should export a function", function() {
     expect(compiless).to.be.a(Function);
   });
 
-  it("should throw an error if no arguments are given", async function() {
+  it("Should throw an error if no arguments are given", async function() {
     try {
       await compiless();
     } catch (err) {
@@ -27,7 +27,7 @@ describe("compiless", function() {
     expect().fail("Did not throw an error");
   });
 
-  it("should create any missing directories", async function() {
+  it("Should create any missing directories", async function() {
     await compiless(__dirname, {
       "./test-data/assets/": "./test-data/exported"
     });
@@ -35,7 +35,7 @@ describe("compiless", function() {
     expect(fs.existsSync(__dirname + "/test-data/exported")).to.eql(true);
   });
 
-  it("should compile LESS", async function() {
+  it("Should compile LESS", async function() {
     await compiless(__dirname, {
       "./test-data/assets/": "./test-data/exported"
     });
@@ -48,7 +48,7 @@ describe("compiless", function() {
     expect(exported).to.equal(compiled);
   });
 
-  it("should copy any data that is not a LESS file normally", async function() {
+  it("Should copy any data that is not a LESS file normally", async function() {
     await compiless(__dirname, {
       "./test-data/assets/": "./test-data/exported"
     });
@@ -63,7 +63,7 @@ describe("compiless", function() {
     expect(exported).to.equal(original);
   });
 
-  it("should handle sub-directories", async function() {
+  it("Should handle sub-directories", async function() {
     await compiless(__dirname, {
       "./test-data/assets/": "./test-data/exported"
     });
@@ -73,7 +73,7 @@ describe("compiless", function() {
     );
   });
 
-  it("should handle files within these sub-directories", async function() {
+  it("Should handle files within these sub-directories", async function() {
     await compiless(__dirname, {
       "./test-data/assets/": "./test-data/exported"
     });
@@ -83,7 +83,7 @@ describe("compiless", function() {
     ).to.eql(true);
   });
 
-  it("the contents in sub-directories should match", async function() {
+  it("The contents in sub-directories should match", async function() {
     await compiless(__dirname, {
       "./test-data/assets/": "./test-data/exported"
     });
