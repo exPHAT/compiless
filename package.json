@@ -1,12 +1,12 @@
 {
   "name": "compiless",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Compile LESS files throughout a directory tree",
   "main": "dist/index.js",
   "scripts": {
     "clean": "mkdir -p ./dist && rm -rf ./dist/",
     "build": "npm run clean && tsc",
-    "test": "mocha"
+    "test": "npm run build && mocha"
   },
   "repository": {
     "type": "git",
