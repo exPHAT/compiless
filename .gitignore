@@ -1,5 +1,5 @@
 .DS_Store
-*/.DS_Store
 node_modules/*
 test/test-data/exported/*
-
+*.log
+dist/*
