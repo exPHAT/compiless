@@ -6,7 +6,8 @@
   "scripts": {
     "clean": "mkdir -p ./dist && rm -rf ./dist/",
     "build": "npm run clean && tsc",
-    "test": "npm run build && mocha"
+    "test": "npm run build && mocha",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",

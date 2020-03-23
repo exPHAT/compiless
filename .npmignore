@@ -1,0 +1,8 @@
+**/node_modules/
+src/*
+test/*
+.editorconfig
+test/test-data/exported/*
+*.log
+.travis.yml
+tsconfig.json
